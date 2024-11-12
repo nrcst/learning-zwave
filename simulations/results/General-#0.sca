@@ -1,8 +1,8 @@
 version 3
-run General-0-20241024-08:20:00-16560
+run General-0-20241108-11:05:01-6688
 attr configname General
-attr datetime 20241024-08:20:00
-attr datetimef 20241024-082000
+attr datetime 20241108-11:05:01
+attr datetimef 20241108-110501
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,447 +10,40 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network zwavenetwork.zwave_test.ZWaveNetwork
-attr processid 16560
+attr processid 6688
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
+config image-path ../images
 config network zwavenetwork.zwave_test.ZWaveNetwork
 config sim-time-limit 100s
-config *.numNodes 20
 config *.frequency 908.42MHz
 config *.range 30m
 config *.playgroundSizeX 100m
-config *.playgroundSizeY 100m
+config *.playgroundSizeY 60m
 config **.controller.frequency parent.frequency
 config **.controller.range parent.range
 config **.node[*].frequency parent.frequency
 config **.node[*].range parent.range
-config **.controller.app[0].typename ZWaveApp
-config **.node[*].app[0].typename ZWaveApp
 
-par ZWaveNetwork.controller.gate$o[0].channel typename "\"ned.IdealChannel\""
 par ZWaveNetwork.node[0].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[1].channel typename "\"ned.IdealChannel\""
 par ZWaveNetwork.node[1].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.controller.gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[0].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[1].channel typename "\"ned.IdealChannel\""
 par ZWaveNetwork.node[1].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[2].gate$o[0].channel typename "\"ned.IdealChannel\""
 par ZWaveNetwork.node[2].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[3].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[3].gate$o[0].channel typename "\"ned.IdealChannel\""
 par ZWaveNetwork.node[3].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[1].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[0].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[1].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[4].gate$o[0].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.controller.gate$o[0].channel typename "\"ned.IdealChannel\""
 par ZWaveNetwork.node[1].gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.controller.gate$o[1].channel typename "\"ned.IdealChannel\""
 par ZWaveNetwork.node[2].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[1].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[2].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[2].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[3].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[3].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[4].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[4].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[5].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[5].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[6].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[6].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[7].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[7].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[8].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[8].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[9].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[9].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[10].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[10].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[11].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[11].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[12].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[12].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[13].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[13].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[14].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[14].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[15].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[15].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[16].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[16].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[17].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[17].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[18].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[18].gate$o[19].channel typename "\"ned.IdealChannel\""
-par ZWaveNetwork.node[19].gate$o[19].channel typename "\"ned.IdealChannel\""
 par ZWaveNetwork.controller typename "\"zwavenetwork.zwave_test.ZWaveController\""
+par ZWaveNetwork.controller sendCommands false
+par ZWaveNetwork.controller commandNode -1
+par ZWaveNetwork.controller commandType "\"\""
 par ZWaveNetwork.controller frequency 908.42MHz
 attr unit MHz
 par ZWaveNetwork.controller range 30m
@@ -460,109 +53,44 @@ par ZWaveNetwork.node[0] frequency 908.42MHz
 attr unit MHz
 par ZWaveNetwork.node[0] range 30m
 attr unit m
+par ZWaveNetwork.node[0] deviceType "\"generic\""
+par ZWaveNetwork.node[0] displayImage "\"\""
 par ZWaveNetwork.node[1] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
 par ZWaveNetwork.node[1] frequency 908.42MHz
 attr unit MHz
 par ZWaveNetwork.node[1] range 30m
 attr unit m
+par ZWaveNetwork.node[1] deviceType "\"generic\""
+par ZWaveNetwork.node[1] displayImage "\"\""
 par ZWaveNetwork.node[2] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
 par ZWaveNetwork.node[2] frequency 908.42MHz
 attr unit MHz
 par ZWaveNetwork.node[2] range 30m
 attr unit m
+par ZWaveNetwork.node[2] deviceType "\"generic\""
+par ZWaveNetwork.node[2] displayImage "\"\""
 par ZWaveNetwork.node[3] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
 par ZWaveNetwork.node[3] frequency 908.42MHz
 attr unit MHz
 par ZWaveNetwork.node[3] range 30m
 attr unit m
+par ZWaveNetwork.node[3] deviceType "\"generic\""
+par ZWaveNetwork.node[3] displayImage "\"\""
 par ZWaveNetwork.node[4] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
 par ZWaveNetwork.node[4] frequency 908.42MHz
 attr unit MHz
 par ZWaveNetwork.node[4] range 30m
 attr unit m
-par ZWaveNetwork.node[5] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[5] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[5] range 30m
-attr unit m
-par ZWaveNetwork.node[6] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[6] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[6] range 30m
-attr unit m
-par ZWaveNetwork.node[7] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[7] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[7] range 30m
-attr unit m
-par ZWaveNetwork.node[8] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[8] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[8] range 30m
-attr unit m
-par ZWaveNetwork.node[9] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[9] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[9] range 30m
-attr unit m
-par ZWaveNetwork.node[10] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[10] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[10] range 30m
-attr unit m
-par ZWaveNetwork.node[11] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[11] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[11] range 30m
-attr unit m
-par ZWaveNetwork.node[12] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[12] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[12] range 30m
-attr unit m
-par ZWaveNetwork.node[13] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[13] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[13] range 30m
-attr unit m
-par ZWaveNetwork.node[14] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[14] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[14] range 30m
-attr unit m
-par ZWaveNetwork.node[15] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[15] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[15] range 30m
-attr unit m
-par ZWaveNetwork.node[16] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[16] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[16] range 30m
-attr unit m
-par ZWaveNetwork.node[17] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[17] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[17] range 30m
-attr unit m
-par ZWaveNetwork.node[18] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[18] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[18] range 30m
-attr unit m
-par ZWaveNetwork.node[19] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
-par ZWaveNetwork.node[19] frequency 908.42MHz
-attr unit MHz
-par ZWaveNetwork.node[19] range 30m
-attr unit m
+par ZWaveNetwork.node[4] deviceType "\"generic\""
+par ZWaveNetwork.node[4] displayImage "\"\""
 par ZWaveNetwork typename "\"zwavenetwork.zwave_test.ZWaveNetwork\""
-par ZWaveNetwork numNodes 20
+par ZWaveNetwork backgroundImage "\"backgrounds/floorplan.png\""
 par ZWaveNetwork frequency 908.42MHz
 attr unit MHz
 par ZWaveNetwork range 30m
 attr unit m
 par ZWaveNetwork playgroundSizeX 100m
 attr unit m
-par ZWaveNetwork playgroundSizeY 100m
+par ZWaveNetwork playgroundSizeY 60m
 attr unit m
 

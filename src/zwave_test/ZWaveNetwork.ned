@@ -4,26 +4,44 @@ import ned.IdealChannel;
 network ZWaveNetwork
 {
     parameters:
-        int numNodes = default(20);
+        @display("bgb=$playgroundSizeX,$playgroundSizeY;bgp=0,0;bgi=default");
         double frequency @unit(MHz) = default(908.42MHz);
-        double range @unit(m) = default(30m);  // Approximate range for ZWave
+        double range @unit(m) = default(30m);
         double playgroundSizeX @unit(m) = default(100m);
-        double playgroundSizeY @unit(m) = default(100m);
+        double playgroundSizeY @unit(m) = default(60m);
         @display("bgb=unit($playgroundSizeX, m), unit($playgroundSizeY, m)");
+    
     submodules:
         controller: ZWaveController {
-            @display("p=50,50;i=device/antennatower");
+            parameters:
+                @display("p=50,30;i=device/antennatower");
         }
-        node[numNodes]: ZWaveNode {
-            @display("p=,,m,0.5,0.5;is=s");
+        node[8]: ZWaveNode {
+            parameters:
+                @display("is=s");
         }
+    
     connections allowunconnected:
-        // Koneksi Controller ke Node
-        for i=0..numNodes-1 {
+//        node[0].gate++ <--> IdealChannel <--> node[1].gate++;
+//        node[1].gate++ <--> IdealChannel <--> node[2].gate++;
+//        node[2].gate++ <--> IdealChannel <--> node[3].gate++;
+//        node[3].gate++ <--> IdealChannel <--> node[4].gate++;
+//        node[4].gate++ <--> IdealChannel <--> node[5].gate++;
+//        node[0].gate++ <--> IdealChannel <--> node[6].gate++;
+//        node[6].gate++ <--> IdealChannel <--> node[7].gate++;
+//    
+        for i=0..7 {
             controller.gate++ <--> IdealChannel <--> node[i].gate++;
         }
-
-        // Koneksi Node ke Node (Mesh) - Menggunakan ekspresi untuk simulasi nested loop
-        for i=0..numNodes-1, for j=i+1..numNodes-1 {
-            node[i].gate++ <--> IdealChannel <--> node[j].gate++;}
+        
+        node[0].gate++ <--> IdealChannel <--> node[1].gate++;
+        node[1].gate++ <--> IdealChannel <--> node[2].gate++;
+        node[2].gate++ <--> IdealChannel <--> node[3].gate++;
+        node[3].gate++ <--> IdealChannel <--> node[4].gate++;
+        node[4].gate++ <--> IdealChannel <--> node[5].gate++;
+        node[5].gate++ <--> IdealChannel <--> node[6].gate++;
+        node[6].gate++ <--> IdealChannel <--> node[7].gate++;
+        node[7].gate++ <--> IdealChannel <--> node[0].gate++;
+        
+        
 }
