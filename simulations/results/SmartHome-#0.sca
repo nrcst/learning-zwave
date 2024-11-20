@@ -1,0 +1,206 @@
+version 3
+run SmartHome-0-20241112-12:58:15-7936
+attr configname SmartHome
+attr datetime 20241112-12:58:15
+attr datetimef 20241112-125815
+attr experiment SmartHome
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network zwavenetwork.zwave_test.ZWaveNetwork
+attr processid 7936
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../images
+config description "Smart Home Z-Wave network layout with 8 nodes"
+config **.node[0].x 10m
+config **.node[0].y 10m
+config **.node[0].deviceType "\"light\""
+config **.node[0].displayString "\"i=block/circle,,yellow\""
+config **.node[1].x 30m
+config **.node[1].y 10m
+config **.node[1].deviceType "\"alarm\""
+config **.node[1].alarmTestInterval 15s
+config **.node[1].displayString "\"i=block/circle,,red\""
+config **.node[2].x 50m
+config **.node[2].y 10m
+config **.node[2].deviceType "\"thermostat\""
+config **.node[2].displayString "\"i=block/circle,,blue\""
+config **.node[3].x 70m
+config **.node[3].y 10m
+config **.node[3].deviceType "\"door\""
+config **.node[3].displayString "\"i=block/circle,,green\""
+config **.node[4].x 90m
+config **.node[4].y 10m
+config **.node[4].deviceType "\"window\""
+config **.node[4].displayString "\"i=block/circle,,cyan\""
+config **.node[5].x 25m
+config **.node[5].y 40m
+config **.node[5].deviceType "\"plug\""
+config **.node[5].displayString "\"i=block/circle,,orange\""
+config **.node[6].x 75m
+config **.node[6].y 40m
+config **.node[6].deviceType "\"sensor\""
+config **.node[6].motionDetectionInterval 20s
+config **.node[6].displayString "\"i=block/circle,,purple\""
+config **.node[7].x 50m
+config **.node[7].y 50m
+config **.node[7].deviceType "\"camera\""
+config **.node[7].displayString "\"i=block/circle,,grey\""
+config **.controller.x 50m
+config **.controller.y 30m
+config **.controller.displayString "\"i=block/circle,,black\""
+config network zwavenetwork.zwave_test.ZWaveNetwork
+config sim-time-limit 200s
+config *.frequency 908.42MHz
+config *.range 30m
+config *.playgroundSizeX 100m
+config *.playgroundSizeY 60m
+config **.controller.frequency parent.frequency
+config **.controller.range parent.range
+config **.node[*].frequency parent.frequency
+config **.node[*].range parent.range
+
+par ZWaveNetwork.controller.gate$o[0].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[0].gate$o[0].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.controller.gate$o[1].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[1].gate$o[0].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.controller.gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[2].gate$o[0].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.controller.gate$o[3].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[3].gate$o[0].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.controller.gate$o[4].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[4].gate$o[0].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.controller.gate$o[5].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[5].gate$o[0].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.controller.gate$o[6].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[6].gate$o[0].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.controller.gate$o[7].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[7].gate$o[0].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[0].gate$o[1].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[1].gate$o[1].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[1].gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[2].gate$o[1].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[2].gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[3].gate$o[1].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[3].gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[4].gate$o[1].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[4].gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[5].gate$o[1].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[5].gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[6].gate$o[1].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[6].gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[7].gate$o[1].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[7].gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.node[0].gate$o[2].channel typename "\"ned.IdealChannel\""
+par ZWaveNetwork.controller typename "\"zwavenetwork.zwave_test.ZWaveController\""
+par ZWaveNetwork.controller sendCommands false
+par ZWaveNetwork.controller commandNode -1
+par ZWaveNetwork.controller commandType "\"\""
+par ZWaveNetwork.controller frequency 908.42MHz
+attr unit MHz
+par ZWaveNetwork.controller range 30m
+attr unit m
+par ZWaveNetwork.node[0] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
+par ZWaveNetwork.node[0] frequency 908.42MHz
+attr unit MHz
+par ZWaveNetwork.node[0] range 30m
+attr unit m
+par ZWaveNetwork.node[0] deviceType "\"light\""
+par ZWaveNetwork.node[0] alarmTestInterval 0s
+attr unit s
+par ZWaveNetwork.node[0] motionDetectionInterval 0s
+attr unit s
+par ZWaveNetwork.node[0] displayImage "\"\""
+par ZWaveNetwork.node[1] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
+par ZWaveNetwork.node[1] frequency 908.42MHz
+attr unit MHz
+par ZWaveNetwork.node[1] range 30m
+attr unit m
+par ZWaveNetwork.node[1] deviceType "\"alarm\""
+par ZWaveNetwork.node[1] alarmTestInterval 15s
+attr unit s
+par ZWaveNetwork.node[1] motionDetectionInterval 0s
+attr unit s
+par ZWaveNetwork.node[1] displayImage "\"\""
+par ZWaveNetwork.node[2] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
+par ZWaveNetwork.node[2] frequency 908.42MHz
+attr unit MHz
+par ZWaveNetwork.node[2] range 30m
+attr unit m
+par ZWaveNetwork.node[2] deviceType "\"thermostat\""
+par ZWaveNetwork.node[2] alarmTestInterval 0s
+attr unit s
+par ZWaveNetwork.node[2] motionDetectionInterval 0s
+attr unit s
+par ZWaveNetwork.node[2] displayImage "\"\""
+par ZWaveNetwork.node[3] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
+par ZWaveNetwork.node[3] frequency 908.42MHz
+attr unit MHz
+par ZWaveNetwork.node[3] range 30m
+attr unit m
+par ZWaveNetwork.node[3] deviceType "\"door\""
+par ZWaveNetwork.node[3] alarmTestInterval 0s
+attr unit s
+par ZWaveNetwork.node[3] motionDetectionInterval 0s
+attr unit s
+par ZWaveNetwork.node[3] displayImage "\"\""
+par ZWaveNetwork.node[4] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
+par ZWaveNetwork.node[4] frequency 908.42MHz
+attr unit MHz
+par ZWaveNetwork.node[4] range 30m
+attr unit m
+par ZWaveNetwork.node[4] deviceType "\"window\""
+par ZWaveNetwork.node[4] alarmTestInterval 0s
+attr unit s
+par ZWaveNetwork.node[4] motionDetectionInterval 0s
+attr unit s
+par ZWaveNetwork.node[4] displayImage "\"\""
+par ZWaveNetwork.node[5] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
+par ZWaveNetwork.node[5] frequency 908.42MHz
+attr unit MHz
+par ZWaveNetwork.node[5] range 30m
+attr unit m
+par ZWaveNetwork.node[5] deviceType "\"plug\""
+par ZWaveNetwork.node[5] alarmTestInterval 0s
+attr unit s
+par ZWaveNetwork.node[5] motionDetectionInterval 0s
+attr unit s
+par ZWaveNetwork.node[5] displayImage "\"\""
+par ZWaveNetwork.node[6] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
+par ZWaveNetwork.node[6] frequency 908.42MHz
+attr unit MHz
+par ZWaveNetwork.node[6] range 30m
+attr unit m
+par ZWaveNetwork.node[6] deviceType "\"sensor\""
+par ZWaveNetwork.node[6] alarmTestInterval 0s
+attr unit s
+par ZWaveNetwork.node[6] motionDetectionInterval 20s
+attr unit s
+par ZWaveNetwork.node[6] displayImage "\"\""
+par ZWaveNetwork.node[7] typename "\"zwavenetwork.zwave_test.ZWaveNode\""
+par ZWaveNetwork.node[7] frequency 908.42MHz
+attr unit MHz
+par ZWaveNetwork.node[7] range 30m
+attr unit m
+par ZWaveNetwork.node[7] deviceType "\"camera\""
+par ZWaveNetwork.node[7] alarmTestInterval 0s
+attr unit s
+par ZWaveNetwork.node[7] motionDetectionInterval 0s
+attr unit s
+par ZWaveNetwork.node[7] displayImage "\"\""
+par ZWaveNetwork typename "\"zwavenetwork.zwave_test.ZWaveNetwork\""
+par ZWaveNetwork frequency 908.42MHz
+attr unit MHz
+par ZWaveNetwork range 30m
+attr unit m
+par ZWaveNetwork playgroundSizeX 100m
+attr unit m
+par ZWaveNetwork playgroundSizeY 60m
+attr unit m
+
